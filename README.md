@@ -1,32 +1,42 @@
-M&A Impact Analysis: Alphabet Inc. (Google) Financial Performance (2004–2024)
+M&A Impact Analysis: The Case of Alphabet Inc. (2004–2024)
 
-📝 Project Overview
+🔍 What It Is?
 
-This repository contains the statistical analysis and research code for my Master's Thesis: "Effects of Mergers and Acquisitions on the Financial Performance and Strategy in the Global Tech Industry: The case of Alphabet Inc.".
+This project is a comprehensive financial econometric analysis that explores the long-term effects of Mergers and Acquisitions (M&A) on the performance of a global technology leader, Alphabet Inc.. Covering a 21-year trajectory from 2004 to 2024, the study examines how more than 250 strategic transactions—including the acquisitions of YouTube, Motorola Mobility, and Fitbit—have reshaped the company's financial health across three fundamental pillars:
+- Profitability: Gauging efficiency through ROA, ROE, and Net Profit Margin.
+- Liquidity: Assessing short-term cash flexibility via Current, Quick, and Cash Ratios.
+- Solvency: Evaluating capital structure stability through Debt-to-Asset and Debt-to-Equity ratios.
+  
+💡 Why It Is?
 
-The project investigates how 21 years of aggressive acquisition strategies (including landmark deals like YouTube, Motorola, and Fitbit) have influenced Alphabet Inc.'s core financial health. By utilizing Ordinary Least Squares (OLS) regression and rigorous diagnostic testing, this study quantifies the relationship between M&A intensity and profitability, liquidity, and solvency.
+In the fast-paced technology industry, M&A is often pursued as a "growth hack," yet the majority of deals fail to meet their intended objectives. This repository is essential for anyone interested in Data-Driven Finance or Strategic Management because:
+- Empirical Evidence over Hype: It moves beyond business narratives to provide statistical proof of how M&A affects the bottom line.
+- Understanding Temporal Lags: It demonstrates that the benefits of tech acquisitions are rarely immediate and often require a "gestation period" for integration.
+- Investment Insight: It highlights the "Liquidity-Expansion Trade-off"—showing how aggressive growth can temporarily strain cash reserves.
+- Real-World Success vs. Failure: Through comparative analysis (e.g., the success of YouTube vs. the challenges of Motorola Mobility), it offers a blueprint for effective post-merger integration.
 
-📊 Dataset & Variables
+🛠️ How It Works?
 
-The analysis is based on a longitudinal dataset spanning from 2004 to 2024. Data was consolidated from FactSet, SEC filings (Form 10-K), and Alphabet’s official investor relations publications.
-- Independent Variables (Predictors): Annual Number of Acquisitions (t and t-1), Annual M&A Spending (t and t-1), and Annual Revenue (as a control for firm size).
-- Dependent Variables: 9 key financial ratios categorized into three dimensions:
-  - Profitability: ROA, ROE, Net Profit Margin.
-  - Liquidity: Current Ratio, Quick Ratio, Cash Ratio.
-  - Solvency: Debt-to-Assets, Debt-to-Equity, Net Debt-to-Equity.
+This analysis follows a rigorous scientific workflow, transforming raw financial data into actionable insights using modern analytical tools:
+⚙️ Analytical Framework
+- Data Engineering: Pre-processing 21 years of financial statements and implementing One-Year Lagged Variables to capture delayed integration effects.
+- Econometric Modeling: Applying Ordinary Least Squares (OLS) Regression to quantify the strength and direction of M&A impacts.
+- Diagnostic Validation: Ensuring statistical integrity through:
+  - VIF Analysis: Testing for multicollinearity among predictors.
+  - Breusch-Pagan Test: Detecting heteroskedasticity.
+  - Durbin-Watson Statistic: Evaluating autocorrelation in time-series residuals.
+  - Jarque-Bera Test: Confirming the normality of residuals.
 
-🛠 Methodology
+🛠️ Toolstack
 
-The analysis follows a strict econometric workflow to ensure the reliability of results:
-- Feature Engineering: Implementation of one-year lagged variables to capture the "gestation period" of acquisition synergies.
-- Regression Modeling: Multi-model comparison (individual vs. aggregated ratios) using Ordinary Least Squares (OLS).
-- Statistical Diagnostics: Validation of model assumptions including:
-  - Multicollinearity: Variance Inflation Factor (VIF).
-  - Heteroskedasticity: Breusch-Pagan Test.
-  - Normality of Residuals: Jarque-Bera Test.
-  - Autocorrelation: Durbin-Watson Statistic.
+- Python: The core engine for data manipulation and statistical computing.
+- Pandas & NumPy: For robust financial data cleaning and feature engineering.
+- Statsmodels: For detailed OLS regression outputs and diagnostic tests.
+- Matplotlib & Seaborn: For high-fidelity financial data visualizations and correlation heatmaps.
+- Google Colab: The integrated development environment used for reproducibility.
 
 🚀 Key Findings
+
 - Liquidity Strain: M&A activity shows a significant immediate negative impact on all liquidity ratios, as the firm redeploys cash for integration and investment.
 - Profitability Lag: Short-term profitability often declines in the year following an acquisition (t-1) due to integration costs, though long-term strategic value is created as shown in the YouTube case study.
 - Solvency Dynamics: M&A leads to a moderate increase in leverage, though overall solvency is primarily driven by revenue-based expansion rather than acquisition debt alone.
